@@ -3,20 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт – Интернет-магазин строительных материалов и инструментов для ремонта</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i|PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="site-header">
       <div class="site-header__top">
         <div class="site-header__container container">
           <a class="logo site-header__logo">Техномарт</a>
-          <form class="site-header__search-form" action="https://echo.htmlacademy.ru" method="get">
-            <label>
-              <input class="site-header__search site-header__search--passive" type="search" placeholder="Поиск:">
-            </label>
-          </form>
-          <a class="site-header__bookmarks" href="#">Закладки: 0</a>
-          <a class="site-header__cart" href="#">Корзина: 0</a>
+          <div class="site-header__additional-nav">
+            <form class="site-header__search-form" action="https://echo.htmlacademy.ru" method="get">
+              <label>
+                <input type="search" placeholder="Поиск:">
+              </label>
+            </form>
+            <a href="#">Закладки: 0</a>
+            <a href="#">Корзина: 0</a>
+        </div>
           <a class="site-header__order" href="#">Оформить заказ</a>
         </div>
       </div>
@@ -223,7 +227,7 @@
     <footer class="site-footer">
       <div class="container">
         <div class="site-footer__top">
-          <a class="site-footer__logo logo">Техномарт</a>
+          <a class="logo site-header__logo">Техномарт</a>
           <address class="site-footer__address">
             г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
             <a class="site-footer__phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
