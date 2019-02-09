@@ -26,7 +26,10 @@
       </div>
       <div class="site-header__bottom">
         <div class="site-header__container container">
-          <h1><a>Интернет-магазин строительных материалов и инструментов для ремонта</a></h1>
+          <h1 class="site-header__main-title">
+            <a>Интернет-магазин
+              <br>строительных материалов
+              <br>и инструментов для ремонта</a></h1>
           <div class="site-header__contacts">
             <address class="site-header__address">
               <a href="tel:+78125550555">+7 (812) 555-05-55</a>
@@ -85,7 +88,7 @@
               <p>Соседям на радость</p>
               <button type="button" class="slider__btn slider__btn--prev">Прокрутка слайдера влево</button>
               <button type="button" class="slider__btn slider__btn--next">Прокрутка слайдера вправо</button>
-              <a href="#">Открыть каталог</a>
+              <a class="section-link" href="#" >Открыть каталог</a>
             </div>
             <div class="advantages__bottom-right">
                   <div class="advantages__item advantages__item--discounts">
@@ -104,7 +107,7 @@
         <div class="container">
           <div class="products__top-block">
             <h2>Популярные товары:</h2>
-            <a class="products__link" href="#">Все популярные товары</a>
+            <a class="products__link section-link" href="#">Все популярные товары</a>
           </div>
           <ul class="products__products" aria-label="Популярные товары">
             <li>
@@ -161,7 +164,7 @@
         <div class="container">
           <div class="manufacturers__top-block">
             <h2>Популярные производители:</h2>
-            <a class="manufacturers__link" href="#">Все производители</a>
+            <a class="manufacturers__link section-link" href="#">Все производители</a>
           </div>
           <a class="manufacturers__logo" href="#"><img src="img/bosch.jpg" width="126" height="37" alt="Bosch"></a>
           <a class="manufacturers__logo" href="#"><img src="img/makita.jpg" width="123" height="40" alt="Makita"></a>
@@ -210,7 +213,7 @@
             <li>Автотрейдинг</li>
             <li>ЖелДорЭкспедиция</li>
           </ul>
-          <a class="about-us__link" href="#">Подробнее о компании</a>
+          <a class="about-us__link section-link" href="#">Подробнее о компании</a>
         </div>
       </section>
       <section class="contacts">
@@ -220,17 +223,17 @@
           <div class="contacts__map">
             <a href="#"><img src="img/contacts-map.jpg" width="300" height="158" alt="Офис на карте по адресу: Большая Конюшенная ул., 19"></a>
           </div>
-          <a class="contacts__link" href="#">Заблудились? Напишите нам!</a>
+          <a class="contacts__link section-link" href="#">Заблудились? Напишите нам!</a>
         </div>
       </section>
     </main>
     <footer class="site-footer">
       <div class="container">
         <div class="site-footer__top">
-          <a class="logo site-header__logo">Техномарт</a>
+          <a class="logo site-footer__logo">Техномарт</a>
           <address class="site-footer__address">
             г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-            <a class="site-footer__phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
+            <br>+7 (812) 555-05-55
           </address>
           <ul class="site-footer__company" aria-label="Нижнее меню сайта">
             <li><a href="#">Компания</a></li>
@@ -262,11 +265,11 @@
       </div>
     </footer>
     <div class="overlay"></div>
-    <div class="contacts__map-popup">
+    <div class="contacts__map-popup visually-hidden">
       <img src="img/popup-map.jpg" width="1736" height="779" alt="Офис на карте по адресу: Большая Конюшенная ул., 19">
       <button type="button" name="close-map">Закрыть карту</button>
     </div>
-    <div class="contacts__write-popup">
+    <div class="contacts__write-popup visually-hidden">
       <div class="contacts__write-popup-in">
         <form class="contacts__popup-write" action="https://echo.htmlacademy.ru">
           <fieldset>
