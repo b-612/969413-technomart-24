@@ -49,19 +49,19 @@
               <li><a href="#">Личный кабинет</a></li>
             </ul>
           </div>
-          <nav class="site-header__main-navigation main-navigation">
-            <h2 class="visually-hidden">Главная навигация сайта Техномарт</h2>
-            <ul class="main-navigation__site-list site-list">
-              <li><a href="#">Главная</a></li>
-              <li><a href="#">Компания</a></li>
-              <li><a href="#">Каталог</a></li>
-              <li><a href="#">Новости</a></li>
-              <li><a href="#">Спецпредложения</a></li>
-              <li><a href="#">Доставка</a></li>
-              <li><a href="#">Контакты</a></li>
-            </ul>
-          </nav>
         </div>
+        <nav class="site-header__main-navigation main-navigation container">
+          <h2 class="visually-hidden">Главная навигация сайта Техномарт</h2>
+          <ul class="main-navigation__site-list site-list">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Компания</a></li>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Спецпредложения</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
     <main class="site-content">
@@ -73,71 +73,71 @@
         <li class="breadcrumbs-current" aria-current="page">Перфораторы</li>
       </ul>
     </div>
-    <section class="products">
-      <div class="container">
-        <div class="products_top-catalog">
-          <h2 class="visually-hidden">Перфораторы</h2>
-        </div>
-        <form class="products__filter" action="https://echo.htmlacademy.ru" method="post">
-          <span>Фильтр:</span>
-          <fieldset class="products__filter-range">
-            <legend>Цена:</legend>
-            <div class="products__range-price">
-              <div class="products__ranges">
-                <button class="products__range-btn products__range-btn--lower" type="button">Регулятор нижнего диапазона цены</button>
-                <button class="products__range-btn products__range-btn--upper" type="button">Регулятор верхнего диапазона цены</button>
-              </div>
-              <div class="products__range-outputs">
-                <label class="visually-hidden" for="output-lower">Цена от:</label>
-                <input type="text" name="lower" id="output-lower" placeholder="0">
-                <span>&ndash;</span>
-                <label class="visually-hidden" for="output-upper">Цена до:</label>
-                <input type="text" name="upper" id="output-upper" placeholder="30000">
-              </div>
+    <section class="products container">
+      <div class="products_top-catalog">
+        <h2>Перфораторы</h2>
+      </div>
+      <form class="products__filter" action="https://echo.htmlacademy.ru" method="post">
+        <span>Фильтр:</span>
+        <fieldset class="products__filter-range">
+          <legend>Цена:</legend>
+          <div class="products__range-price">
+            <div class="products__ranges">
+              <button class="products__range-btn products__range-btn--lower" type="button">Регулятор нижнего диапазона цены</button>
+              <button class="products__range-btn products__range-btn--upper" type="button">Регулятор верхнего диапазона цены</button>
             </div>
-          </fieldset>
-          <fieldset class="products__filter-checkbox">
-            <legend>Производители:</legend>
-            <ul class="products__manufacturers-list" aria-label="Можно отметить один или несколько вариантов">
-              <li>
-                <input class="visually-hidden" type="checkbox" name="bosch" id="checkbox-bosch">
-                <label for="checkbox-bosch">Bosch</label>
-              </li>
-              <li>
-                <input class="visually-hidden" type="checkbox" name="interskol" id="checkbox-interskol">
-                <label for="checkbox-interskol">Интерскол</label>
-              </li>
-              <li>
-                <input class="visually-hidden" type="checkbox" name="makita" id="checkbox-makita">
-                <label for="checkbox-makita">Интерскол</label>
-              </li>
-              <li>
-                <input class="visually-hidden" type="checkbox" name="dewalt" id="checkbox-dewalt">
-                <label for="checkbox-dewalt">DeWalt</label>
-              </li>
-              <li>
-                <input class="visually-hidden" type="checkbox" name="hitachi" id="checkbox-hitachi">
-                <label for="checkbox-hitachi">Hitachi</label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="products__filter-radio">
-            <legend>Производители:</legend>
-            <ul class="products__power-list" aria-label="Можно отметить один вариант">
-              <li>
-                <input class="visually-hidden" type="radio" name="battery" id="radio-battery">
-                <label for="radio-battery">Аккумуляторные</label>
-              </li>
-              <li>
-                <input class="visually-hidden" type="radio" name="network" id="radio-network">
-                <label for="radio-network">Сетевые</label>
-              </li>
-            </ul>
-          </fieldset>
-          <div class="products__filter-submit">
-            <button type="submit" name="show" aria-label="Показать отфильтрованные результаты">Показать</button>
+            <div class="products__range-outputs">
+              <label class="visually-hidden" for="output-lower">Цена от:</label>
+              <input type="text" name="lower" id="output-lower" placeholder="0">
+              <span>&ndash;</span>
+              <label class="visually-hidden" for="output-upper">Цена до:</label>
+              <input type="text" name="upper" id="output-upper" placeholder="30000">
+            </div>
           </div>
-        </form>
+        </fieldset>
+        <fieldset class="products__filter-checkbox">
+          <legend>Производители:</legend>
+          <ul class="products__manufacturers-list" aria-label="Можно отметить один или несколько вариантов">
+            <li>
+              <input class="visually-hidden" type="checkbox" name="bosch" id="checkbox-bosch">
+              <label for="checkbox-bosch">Bosch</label>
+            </li>
+            <li>
+              <input class="visually-hidden" type="checkbox" name="interskol" id="checkbox-interskol">
+              <label for="checkbox-interskol">Интерскол</label>
+            </li>
+            <li>
+              <input class="visually-hidden" type="checkbox" name="makita" id="checkbox-makita">
+              <label for="checkbox-makita">Интерскол</label>
+            </li>
+            <li>
+              <input class="visually-hidden" type="checkbox" name="dewalt" id="checkbox-dewalt">
+              <label for="checkbox-dewalt">DeWalt</label>
+            </li>
+            <li>
+              <input class="visually-hidden" type="checkbox" name="hitachi" id="checkbox-hitachi">
+              <label for="checkbox-hitachi">Hitachi</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="products__filter-radio">
+          <legend>Производители:</legend>
+          <ul class="products__power-list" aria-label="Можно отметить один вариант">
+            <li>
+              <input class="visually-hidden" type="radio" name="battery" id="radio-battery">
+              <label for="radio-battery">Аккумуляторные</label>
+            </li>
+            <li>
+              <input class="visually-hidden" type="radio" name="network" id="radio-network">
+              <label for="radio-network">Сетевые</label>
+            </li>
+          </ul>
+        </fieldset>
+        <div class="products__filter-submit">
+          <button type="submit" name="show" aria-label="Показать отфильтрованные результаты">Показать</button>
+        </div>
+      </form>
+      <div class="products__sorting-catalog">
         <div class="products__sorting">
           <ul aria-label="Параметры сортировки">
             <li><a class="products__sorting-btn" href="#">По цене</a></li>
@@ -254,14 +254,14 @@
             </div>
           </li>
         </ul>
-        <div class="products__pagination">
-          <ul class="site-pagination" aria-label="Постраничная навигация">
-            <li class="current" aria-label="Текущая страница"><a>1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">Следующая</a></li>
-          </ul>
-        </div>
+      </div>
+      <div class="products__pagination">
+        <ul class="site-pagination" aria-label="Постраничная навигация">
+          <li class="current" aria-label="Текущая страница"><a>1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">Следующая</a></li>
+        </ul>
       </div>
     </section>
     <section class="about-product">
