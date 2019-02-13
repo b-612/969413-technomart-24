@@ -541,12 +541,14 @@ border: 1px solid #ee3643;
 }
 
 .site-footer__top {
+  background-color: #32425c;
+}
+
+.site-footer__top .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding-bottom: 50px;
-
-  background-color: #32425c;
 }
 
 .site-footer__address {
@@ -597,7 +599,7 @@ border: 1px solid #ee3643;
   color: rgba(255, 209, 128, 0.5);
 }
 
-.site-footer__bottom {
+.site-footer__bottom .container {
   display: flex;
   justify-content: space-between;
 }
