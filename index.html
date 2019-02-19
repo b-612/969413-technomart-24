@@ -6,21 +6,20 @@
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i|PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/temporary-file.css" rel="stylesheet">
   </head>
   <body>
     <header class="site-header">
       <div class="site-header__top">
         <div class="site-header__container container">
           <a class="logo site-header__logo">Техномарт</a>
-          <div class="site-header__additional-nav">
-            <form class="site-header__search-form" action="https://echo.htmlacademy.ru" method="get">
-              <label>
-                <input type="search" placeholder="Поиск:">
-              </label>
-            </form>
-            <a href="#">Закладки: 0</a>
-            <a href="#">Корзина: 0</a>
-        </div>
+          <form class="site-header__search-form" action="https://echo.htmlacademy.ru" method="get">
+              <label class="visually-hidden" for="search-field">Поиск по сайту</label>
+              <input class="site-header__search-field" type="search" id="search-field" placeholder="Поиск:">
+              <button type="submit" name="search"></button>
+          </form>
+          <a class="site-header__bookmarcs" href="#">Закладки: 0</a>
+          <a class="site-header__cart" href="#">Корзина: 0</a>
           <a class="site-header__order" href="#">Оформить заказ</a>
         </div>
       </div>
@@ -28,25 +27,16 @@
         <div class="site-header__container container">
           <h1 class="site-header__main-title">
             <a>Интернет-магазин
-              <br>строительных материалов
-              <br>и инструментов для ремонта</a></h1>
-          <div class="site-header__contacts">
+            <br>строительных материалов
+            <br>и инструментов для ремонта</a></h1>
             <address class="site-header__address">
               <a href="tel:+78125550555">+7 (812) 555-05-55</a>
               <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
             </address>
-          </div>
           <div class="site-header__account site-header__account--out">
             <ul>
-              <li><a href="#">Вход</a></li>
-              <li><a href="#">Регистрация</a></li>
-            </ul>
-        </div>
-          <div class="site-header__account site-header__account--in">
-            <span class="site-header__name">Равшан Джамшутович</span>
-            <ul>
-              <li><a href="#">Мои заказы</a></li>
-              <li><a href="#">Личный кабинет</a></li>
+              <li><a class="site-header__login" href="#">Вход</a></li>
+              <li><a class="site-header__register" href="#">Регистрация</a></li>
             </ul>
           </div>
         </div>
@@ -84,11 +74,19 @@
           </div>
           <div class="advantages__bottom-row">
             <div class="advantages__slider slider" aria-label="Слайдер преимущества">
-              <span>Дрели</span>
-              <p>Соседям на радость</p>
+              <div class="advantages__slides">
+                <div class="advantages__slide">
+                <span>Перфораторы</span>
+                <p>Настоящие мужские игрушки</p>
+                </div>
+                <div class="advantages__slide">
+                <span>Дрели</span>
+                <p>Соседям на радость</p>
+                </div>
+              </div>
+              <a class="section-link" href="#" >Открыть каталог</a>
               <button type="button" class="slider__btn slider__btn--prev">Прокрутка слайдера влево</button>
               <button type="button" class="slider__btn slider__btn--next">Прокрутка слайдера вправо</button>
-              <a class="section-link" href="#" >Открыть каталог</a>
             </div>
             <div class="advantages__bottom-right">
                   <div class="advantages__item advantages__item--discounts">
@@ -118,8 +116,8 @@
                 <b class="products__price">25500 р.</b>
               </div>
               <div class="products__product-link">
-                <a class="products__buy" href="#">Купить</a>
-                <a class="products__add-bookmark" href="#">В закладки</a>
+                <a class="btn--buy" href="#">Купить</a>
+                <a class="btn--favorites" href="#">В закладки</a>
               </div>
             </li>
             <li>
@@ -160,8 +158,7 @@
           </ul>
         </div>
       </section>
-      <section class="manufacturers">
-        <div class="container">
+      <section class="manufacturers container">
           <div class="manufacturers__top-block">
             <h2>Популярные производители:</h2>
             <a class="manufacturers__link section-link" href="#">Все производители</a>
@@ -174,7 +171,6 @@
           <a class="manufacturers__logo" href="#"><img src="img/lg.jpg" width="121" height="73" alt="LG"></a>
           <a class="manufacturers__logo" href="#"><img src="img/aeg.jpg" width="151" height="96" alt="AEG"></a>
           <a class="manufacturers__logo" href="#"><img src="img/metabo.jpg" width="204" height="69" alt="Metabo"></a>
-      </div>
       </section>
       <section class="services">
         <div class="container">
@@ -265,11 +261,11 @@
       </div>
     </footer>
     <div class="overlay"></div>
-    <div class="contacts__map-popup visually-hidden">
+    <div class="modal-map modal">
       <img src="img/popup-map.jpg" width="1736" height="779" alt="Офис на карте по адресу: Большая Конюшенная ул., 19">
-      <button type="button" name="close-map">Закрыть карту</button>
+      <button class="modal-close" type="button" name="close-map">Закрыть карту</button>
     </div>
-    <div class="contacts__write-popup visually-hidden">
+    <div class="modal-write modal">
       <div class="contacts__write-popup-in">
         <form class="contacts__popup-write" action="https://echo.htmlacademy.ru">
           <fieldset>
@@ -280,7 +276,7 @@
            <label for="letter-field">Ваше имя:</label>
            <textarea name="letter" id="letter-field" rows="5" placeholder="В свободной форме"></textarea>
           </fieldset>
-          <button type="submit" name="submit">Отправить</button>
+          <button class="modal-close" type="submit" name="submit">Отправить</button>
         </form>
       </div>
       <button type="button" name="close-form">Закрыть форму</button>

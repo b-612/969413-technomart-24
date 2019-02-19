@@ -12,15 +12,13 @@
       <div class="site-header__top">
         <div class="site-header__container container">
           <a class="logo site-header__logo">Техномарт</a>
-          <div class="site-header__additional-nav">
-            <form class="site-header__search-form" action="https://echo.htmlacademy.ru" method="get">
-              <label>
-                <input type="search" placeholder="Поиск:">
-              </label>
-            </form>
-            <a href="#">Закладки: 0</a>
-            <a href="#">Корзина: 0</a>
-        </div>
+          <form class="site-header__search-form" action="https://echo.htmlacademy.ru" method="get">
+              <label class="visually-hidden" for="search-field">Поиск по сайту</label>
+              <input class="site-header__search-field" type="search" id="search-field" placeholder="Поиск:">
+              <button type="submit" name="search"></button>
+          </form>
+          <a class="site-header__bookmarcs" href="#">Закладки: 0</a>
+          <a class="site-header__cart" href="#">Корзина: 0</a>
           <a class="site-header__order" href="#">Оформить заказ</a>
         </div>
       </div>
@@ -36,12 +34,6 @@
               <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
             </address>
           </div>
-          <div class="site-header__account site-header__account--out">
-            <ul>
-              <li><a href="#">Вход</a></li>
-              <li><a href="#">Регистрация</a></li>
-            </ul>
-        </div>
           <div class="site-header__account site-header__account--in">
             <span class="site-header__name">Равшан Джамшутович</span>
             <ul>
@@ -313,12 +305,12 @@
       </div>
     </footer>
     <div class="overlay"></div>
-    <div class="products__order-popup visually-hidden">
+    <div class="modal-add modal">
       <div class="products__popup-in">
         <p>Товар добавлен в корзину!</p>
         <a href="#">Оформить заказ</a>
       </div>
-      <button type="button" name="close-order-popup">Продолжить покупки</button>
+      <button class="modal-close" type="button" name="close-order-popup">Продолжить покупки</button>
     </div>
   </body>
 </html>

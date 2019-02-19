@@ -2,20 +2,29 @@
 
 /* Подсветка блоков */
 
-body > * {
-  background-color: rgba(148, 1, 53, 0.8);
+/* body > * {
+  background-color: rgba(148, 1, 53, 0.2);
+  outline: 1px solid rgb(148, 1, 53);
 }
 
 body > * > * {
-  background-color: rgba(238, 255, 0, 0.5);
+  background-color: rgba(238, 255, 0, 0.2);
+  outline: 1px solid rgb(238, 255, 0);
 }
 
 body > * > * > * {
-  background-color: rgba(41, 41, 186, 0.5);
-}
+  background-color: rgba(41, 41, 186, 0.2);
+  outline: 1px solid rgb(41, 41, 186);
+} */
 
-body > * > * > * > * {
-  background-color: rgba(112, 217, 7, 0.5);
-}
+/* .site-header__bottom > * > * > * {
+  background-color: rgba(112, 217, 7, 0.2);
+  outline: 1px solid rgb(112, 217, 7);
+} */
+
+/* * {
+  background-color: rgba(32, 112, 20, 0.2);
+  outline: 1px solid rgb(32, 112, 20);
+} */
 
 /* Конец подсветки */
