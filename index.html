@@ -85,12 +85,12 @@
                 <div class="advantages__slide advantages__slide-perforators">
                 <span>Перфораторы</span>
                 <p>Настоящие мужские игрушки</p>
-                <a class="button-link" href="catalog.html" >Открыть каталог</a>
+                <a class="button-link" href="catalog.html">Открыть каталог</a>
                 </div>
                 <div class="advantages__slide advantages__slide-drills">
                 <span>Дрели</span>
                 <p>Соседям на радость</p>
-                <a class="button-link" href="#" >Открыть каталог</a>
+                <a class="button-link" href="catalog.html" >Открыть каталог</a>
                 </div>
               </div>
             </div>
@@ -231,7 +231,7 @@
             <p>Вы можете забрать товар сами,
             <br>заехав в наш офис:</p>
             <div class="contacts__map">
-              <a href="#"><img src="img/contacts-map.jpg" width="300" height="158" alt="Офис на карте по адресу: Большая Конюшенная ул., 19"></a>
+              <a href="https://yandex.ru/maps/-/CCUSn8oG"><img src="img/contacts-map.jpg" width="300" height="158" alt="Офис на карте по адресу: Большая Конюшенная ул., 19"></a>
             </div>
             <a class="contacts__link button-link" href="form.html">Заблудились? Напишите нам!</a>
           </section>
@@ -273,30 +273,36 @@
         <p class="site-footer__feedback">Обратная связь:
         <br><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
         <p class="site-footer__developer">Разработано —
-        <br><a href="https://htmlacademy.ru">htmlacademy.ru</a></p>
+        <br><a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
         </div>
       </div>
     </footer>
     <div class="overlay"></div>
-    <div class="modal-map modal">
+    <div class="modal modal-map">
       <img src="img/popup-map.jpg" width="1736" height="779" alt="Офис на карте по адресу: Большая Конюшенная ул., 19">
       <button class="modal-close" type="button" name="close-map">Закрыть карту</button>
     </div>
-    <div class="modal-write modal">
-      <div class="contacts__write-popup-in">
-        <form class="contacts__popup-write" action="https://echo.htmlacademy.ru">
-          <fieldset>
-           <label for="name-field">Ваше имя:</label>
+    <div class="modal modal-write">
+      <form action="https://echo.htmlacademy.ru">
+        <div class="fields modal-clearfix">
+         <label>
+           Ваше имя:
            <input type="text" name="name" id="name-field" placeholder="Имя Фамилия">
-           <label for="email-field">Ваш e-mail:</label>
+         </label>
+         <label>
+           Ваш e-mail:
            <input type="email" name="email" id="email-field" placeholder="email@example.com">
-           <label for="letter-field">Ваше имя:</label>
+          </label>
+         <label>
+           Текст письма:
            <textarea name="letter" id="letter-field" rows="5" placeholder="В свободной форме"></textarea>
-          </fieldset>
-          <button class="modal-close" type="submit" name="submit">Отправить</button>
-        </form>
-      </div>
-      <button type="button" name="close-form">Закрыть форму</button>
+          </label>
+        </div>
+        <div class="modal-bottom">
+          <button class="button-link modal-clearfix" type="submit" name="submit">Отправить</button>
+        </div>
+      </form>
+      <button class="modal-close" type="button" name="close-form">Закрыть форму</button>
     </div>
   </body>
   </html>

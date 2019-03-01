@@ -31,7 +31,8 @@
             <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
           </address>
           <div class="site-header__account site-header__account--in">
-            <a class="site-header__name" href="#">Равшан Джамшутович</a>
+            <a class="site-header__name" href="account.html">Равшан Джамшутович</a>
+            <a class="site-header__out" href="#">Выйти</a>
             <ul>
               <li><a href="#">Мои заказы</a></li>
               <li><a href="#">Личный кабинет</a></li>
@@ -289,17 +290,19 @@
         <p class="site-footer__feedback">Обратная связь:
         <br><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
         <p class="site-footer__developer">Разработано —
-        <br><a href="https://htmlacademy.ru">htmlacademy.ru</a></p>
+        <br><a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
         </div>
       </div>
     </footer>
     <div class="overlay"></div>
-    <div class="modal-add modal">
-      <div class="products__popup-in">
-        <p>Товар добавлен в корзину!</p>
-        <a href="#">Оформить заказ</a>
+    <div class="modal modal-order">
+      <p class="modal-clearfix">Товар добавлен в корзину!</p>
+      <div class="modal-bottom">
+        <div class="modal-clearfix order-bottom">
+          <a class="button-link" href="#">Оформить заказ</a>
+          <button class="modal-close button-link order-close" type="button" name="close-order-popup">Продолжить покупки</button>
+        </div>
       </div>
-      <button class="modal-close" type="button" name="close-order-popup">Продолжить покупки</button>
     </div>
   </body>
 </html>
