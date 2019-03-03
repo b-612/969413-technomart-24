@@ -1232,10 +1232,6 @@ img {
   margin-bottom: 68px;
 }
 
-.services__container input[type="radio"] {
-  display: none;
-}
-
 .services__list {
   position: relative;
 
