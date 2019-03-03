@@ -2,10 +2,11 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
     <title>Каталог – Техномарт – Интернет-магазин строительных материалов и инструментов для ремонта</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&ampPT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="site-header">
@@ -32,7 +33,7 @@
           </address>
           <div class="site-header__account site-header__account--in">
             <a class="site-header__name" href="account.html">Равшан Джамшутович</a>
-            <a class="site-header__out" href="#">Выйти</a>
+            <a class="site-header__out" href="#"><span class="visually-hidden">Выйти</span></a>
             <ul>
               <li><a href="#">Мои заказы</a></li>
               <li><a href="#">Личный кабинет</a></li>
@@ -138,8 +139,8 @@
               <li class="products__sorting-btn"><a href="#">По цене</a></li>
               <li class="products__sorting-btn"><a href="#">По типу</a></li>
               <li class="products__sorting-btn"><a href="#">По функционалу</a></li>
-              <li class="products__sorting-btn"><a href="#" aria-label="По возрастанию"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path d="M5.5 0L0 10h11z"/></svg></a></li>
-              <li class="products__sorting-btn"><a href="#" aria-label="По убыванию"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path d="M5.5 10L0 0h11"/></svg></a></li>
+              <li class="products__sorting-btn"><a class="products__arrow" href="#" aria-label="По возрастанию"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path d="M5.5 0L0 10h11z"/></svg></a></li>
+              <li class="products__sorting-btn"><a  class="products__arrow" href="#" aria-label="По убыванию"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path d="M5.5 10L0 0h11"/></svg></a></li>
             </ul>
           </div>
           <ul class="products__products products__products--catalog" aria-label="Каталог продукции">
@@ -149,7 +150,7 @@
               <b class="products__old-price">22500 р.</b>
               <b class="products__price">15500 р.</b>
               <div class="product__box">
-                <a class="btn btn--buy" href="#">Купить</a>
+                <a class="btn btn--buy" href="product.html">Купить</a>
                 <a class="btn btn--favorites" href="#">В закладки</a>
               </div>
             </li>
@@ -159,7 +160,7 @@
               <b class="products__old-price">30500 р.</b>
               <b class="products__price">25500 р.</b>
               <div class="product__box">
-                <a class="btn btn--buy" href="#">Купить</a>
+                <a class="btn btn--buy" href="product.html">Купить</a>
                 <a class="btn btn--favorites" href="#">В закладки</a>
               </div>
             </li>
@@ -169,7 +170,7 @@
               <img src="img/perforator-4.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
               <b class="products__price">12500 р.</b>
               <div class="product__box">
-                <a class="btn btn--buy" href="#">Купить</a>
+                <a class="btn btn--buy" href="product.html">Купить</a>
                 <a class="btn btn--favorites" href="#">В закладки</a>
               </div>
             </li>
@@ -179,7 +180,7 @@
               <b class="products__old-price">22500 р.</b>
               <b class="products__price">15500 р.</b>
               <div class="product__box">
-                <a class="btn btn--buy" href="#">Купить</a>
+                <a class="btn btn--buy" href="product.html">Купить</a>
                 <a class="btn btn--favorites" href="#">В закладки</a>
               </div>
             </li>
@@ -190,7 +191,7 @@
               <b class="products__old-price">30500 р.</b>
               <b class="products__price">25500 р.</b>
               <div class="product__box">
-                <a class="btn btn--buy" href="#">Купить</a>
+                <a class="btn btn--buy" href="product.html">Купить</a>
                 <a class="btn btn--favorites" href="#">В закладки</a>
               </div>
             </li>
@@ -199,7 +200,7 @@
               <img src="img/perforator-4.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
               <b class="products__price">12500 р.</b>
               <div class="product__box">
-                <a class="btn btn--buy" href="#">Купить</a>
+                <a class="btn btn--buy" href="product.html">Купить</a>
                 <a class="btn btn--favorites" href="#">В закладки</a>
               </div>
             </li>
@@ -210,7 +211,7 @@
               <b class="products__old-price">22500 р.</b>
               <b class="products__price">15500 р.</b>
               <div class="product__box">
-                <a class="btn btn--buy" href="#">Купить</a>
+                <a class="btn btn--buy" href="product.html">Купить</a>
                 <a class="btn btn--favorites" href="#">В закладки</a>
               </div>
             </li>
@@ -220,7 +221,7 @@
               <b class="products__old-price">30500 р.</b>
               <b class="products__price">25500 р.</b>
               <div class="product__box">
-                <a class="btn btn--buy" href="#">Купить</a>
+                <a class="btn btn--buy" href="product.html">Купить</a>
                 <a class="btn btn--favorites" href="#">В закладки</a>
               </div>
             </li>
@@ -229,7 +230,7 @@
               <img src="img/perforator-4.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
               <b class="products__price">12500 р.</b>
               <div class="product__box">
-                <a class="btn btn--buy" href="#">Купить</a>
+                <a class="btn btn--buy" href="product.html">Купить</a>
                 <a class="btn btn--favorites" href="#">В закладки</a>
               </div>
             </li>
@@ -283,9 +284,9 @@
         <p class="site-footer__copyright">© 2010–2019 Компания «Техномарт»
         <br>Все права защищены</p>
         <ul class="social site-footer__social" aria-label="Наши страницы в социальных сетях">
-          <li><a href="#"><img class="social-vk" src="img/vk-icon.svg" alt="Вконтакте" width="26" height="15"></a></li>
-          <li><a href="#"><img class="social-fb" src="img/fb-icon.svg" alt="Фейсбук" width="12" height="22"></a></li>
-          <li><a href="#"><img class="social-insta" src="img/insta-icon.svg" alt="Инстаграм" width="21" height="21"></a></li>
+          <li><a class="social-vk" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
+          <li><a class="social-fb" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+          <li><a class="social-insta" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
         </ul>
         <p class="site-footer__feedback">Обратная связь:
         <br><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
@@ -304,6 +305,6 @@
         </div>
       </div>
     </div>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
