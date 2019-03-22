@@ -1,82 +1,144 @@
-window.addEventListener('load', function(){
-  if (typeof(document.querySelector('.overlay')) != 'undefined' && document.querySelector('.overlay') != null){
-    var overlay = document.querySelector('.overlay');
+var map = document.querySelector(".modal-map");
+var openMap = document.querySelector(".contacts__map");
+var closeMap;
+
+var contacts = document.querySelector(".modal-write");
+var contactsLink = document.querySelector(".contacts__link");
+var closeContacts;
+
+var contactsForm = document.querySelector(".write-form");
+var nameField;
+var emailField;
+var messageField;
+var isStorageSupport = true;
+var nameStorage;
+var emailStorage;
+
+var products = document.querySelector(".products__products--catalog");
+var btnBuy;
+var buy;
+var closeBuy;
+
+var overlay = document.querySelector(".overlay");
+
+try {
+  closeMap = map.querySelector(".modal-close");
+  closeContacts = contacts.querySelector(".modal-close")
+
+  nameField = contacts.querySelector("[name=name]");
+  emailField = contacts.querySelector("[name=email]");
+  messageField = contacts.querySelector("[name=letter]");
+
+  try {
+    nameStorage = localStorage.getItem("nameField");
+    emailStorage = localStorage.getItem("emailField");
+  }
+  catch (err) {
+    isStorageSupport = false;
   }
 
-  if (typeof(document.querySelectorAll('.modal-close')) != 'undefined' && document.querySelectorAll('.modal-close') != null){
-    var close = document.querySelectorAll(".modal-close");
-  }
+  openMap.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    map.classList.add("modal-show");
+    overlay.classList.add("modal-show");
+  });
 
-  if (typeof(document.querySelector('.contacts__link')) != 'undefined' && document.querySelector('.contacts__link') != null){
-    var link = document.querySelector('.contacts__link');
-    var button = document.querySelector('.contacts__map');
-    var popup = document.querySelector(".modal-write");
-    var map = document.querySelector(".modal-map");
+  closeMap.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    map.classList.remove("modal-show");
+    overlay.classList.remove("modal-show");
+  });
 
-    link.onclick = function(event){
-      event.preventDefault();
-      popup.classList.add('modal-show');
-      overlay.classList.add('modal-show');
-    };
-
-    button.onclick = function(event){
-      event.preventDefault();
-      overlay.classList.add('modal-show');
-      map.classList.add('modal-show');
+  contactsLink.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    contacts.classList.add("modal-animation");
+    nameField.focus();
+    if (nameStorage && emailStorage) {
+      nameField.value = nameStorage;
+      emailField.value = emailStorage;
+      messageField.focus();
     }
+    overlay.classList.add("modal-show");
+  });
 
-    for (var i = 0; i < close.length; i++){
-      close[i].onclick = function(event){
-        popup.classList.remove('modal-show');
-        map.classList.remove('modal-show');
-        overlay.classList.remove('modal-show');
+  closeContacts.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    contacts.classList.remove("modal-animation");
+    contacts.classList.remove("modal-error");
+    overlay.classList.remove("modal-show");
+  });
+
+  contactsForm.addEventListener("submit", function (evt) {
+    if (!nameField.value || !emailField.value || !messageField.value) {
+      evt.preventDefault();
+      contacts.classList.add("modal-error");
+    }
+    else if (isStorageSupport) {
+      localStorage.setItem("nameField", nameField.value);
+      localStorage.setItem("emailField", emailField.value);
+    }
+  });
+
+  overlay.addEventListener("click", function () {
+    map.classList.remove("modal-show");
+    contacts.classList.remove("modal-animation");
+    contacts.classList.remove("modal-error");
+    overlay.classList.remove("modal-show");
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (map.classList.contains("modal-show")) {
+        map.classList.remove("modal-show");
+        overlay.classList.remove("modal-show");
+      }
+      else if (contacts.classList.contains("modal-animation")) {
+        contacts.classList.remove("modal-animation");
+        contacts.classList.remove("modal-error");
+        overlay.classList.remove("modal-show");
       }
     }
+  });
+}
+catch (err) {
+  console.log("На этой странице есть код, который относится к странице index.html и здесь не выполняется");
+}
 
-    document.addEventListener('keydown', function(event){
-      if (event.keyCode === 27){
-        overlay.classList.remove('modal-show');
-        popup.classList.remove('modal-show');
-        map.classList.remove('modal-show');
-      }
+try {
+  btnBuy = products.querySelectorAll(".btn--buy");
+  buy = document.querySelector(".modal-order");
+  closeBuy = buy.querySelector(".order-close");
+
+  for (var i = 0; i < btnBuy.length; i++) {
+    btnBuy[i].addEventListener("click", function (evt) {
+      evt.preventDefault();
+      buy.classList.add("modal-show");
+      overlay.classList.add("modal-show");
     });
-
-    overlay.onclick = function(){
-      this.classList.remove('modal-show');
-      popup.classList.remove('modal-show');
-      map.classList.remove('modal-show');
-    }
   }
 
-  if (typeof(document.querySelector('.modal-order')) != 'undefined' && document.querySelector('.modal-order') != null){
-    var order = document.querySelectorAll(".btn--buy");
-    var orderPopup = document.querySelector(".modal-order");
+  closeBuy.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    buy.classList.remove("modal-show");
+    overlay.classList.remove("modal-show");
+  });
 
-    for (var i = 0; i < order.length; i++){
-      order[i].onclick = function(event){
-        event.preventDefault();
-        orderPopup.classList.add('modal-show');
-        overlay.classList.add('modal-show');
+  overlay.addEventListener("click", function () {
+    buy.classList.remove("modal-show");
+    overlay.classList.remove("modal-show");
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (buy.classList.contains("modal-show")) {
+        buy.classList.remove("modal-show");
+        overlay.classList.remove("modal-show");
       }
     }
-
-    for (var i = 0; i < close.length; i++){
-      close[i].onclick = function(event){
-        orderPopup.classList.remove('modal-show');
-        overlay.classList.remove('modal-show');
-      }
-    }
-
-    overlay.onclick = function(){
-      this.classList.remove('modal-show');
-      orderPopup.classList.remove('modal-show');
-    }
-
-    document.addEventListener('keydown', function(event){
-      if (event.keyCode === 27){
-        overlay.classList.remove('modal-show');
-        orderPopup.classList.remove('modal-show');
-      }
-    });
-  }
-});
+  });
+}
+catch (err) {
+  console.log("На этой странице есть код, который относится к странице catalog.html и здесь не выполняется");
+}
